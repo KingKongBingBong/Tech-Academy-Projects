@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Referencing jQuery library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+
+    </body>
+
+    <script>
+        //Adding html elements to body of document once in ready state
+        $(document).ready(function() {
+            $("body").append(
+                "<div id='container'>\
+                        <div id='inner'\
+                            <h1>Basic jQuery</h1>\
+                            <p id='1'>Paragraph 1</p>\
+                            <p id='2'>Paragraph 2</p>\
+                            <p id='3'>Paragraph 3</p>\
+                            <p id='4'>Paragraph 4</p>\
+                        </div>\
+                    </div>"
+            );
+            $("#2").css({"color":"red"}); //changing paragraph 2 to red
+            $("#3").on("click", function() { //hiding h1 element on clicking paragraph 3
+                $("h1").hide();
+            });
+            $("#4").on("click", function() { //hiding paragraph 4 on clicking paragraph 4
+                $("#4").hide();
+            })
+            $("#2").on("click", function() { //Using slideUp effect on paragraph 2 over .8 seconds after clicking paragraph 2
+                $("#2").slideUp(800);
+            })
+        });
+
+    </script>
+
+</html>
